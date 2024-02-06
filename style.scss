@@ -127,4 +127,7 @@ body {
     width: 330px;
     transform: translateX(-50%);
   }
+  &:last-child::before {
+    border-bottom: none;
+  }
 }

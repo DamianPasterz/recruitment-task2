@@ -126,4 +126,7 @@ body {
   left: 50%;
   width: 330px;
   transform: translateX(-50%);
+}
+.result-item:last-child::before {
+  border-bottom: none;
 }/*# sourceMappingURL=style.css.map */
