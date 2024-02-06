@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <script type="module" src="app.js" defer></script>
+    <title>Wyszukiwarka</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="search-container">
+        <input class="search-container__input" id="searchInput" placeholder="" type="text" />
+        <label id="label-input" class="search-container__label">Search</label>
+        <svg
+          class="search-container__loader"
+          id="loader"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 256 256"
+        >
+          <path
+            fill="currentColor"
+            d="M134 32v32a6 6 0 0 1-12 0V32a6 6 0 0 1 12 0m39.25 56.75A6 6 0 0 0 177.5 87l22.62-22.63a6 6 0 0 0-8.48-8.48L169 78.5a6 6 0 0 0 4.24 10.25ZM224 122h-32a6 6 0 0 0 0 12h32a6 6 0 0 0 0-12m-46.5 47a6 6 0 0 0-8.5 8.5l22.63 22.62a6 6 0 0 0 8.48-8.48ZM128 186a6 6 0 0 0-6 6v32a6 6 0 0 0 12 0v-32a6 6 0 0 0-6-6m-49.5-17l-22.62 22.64a6 6 0 1 0 8.48 8.48L87 177.5a6 6 0 1 0-8.5-8.5M70 128a6 6 0 0 0-6-6H32a6 6 0 0 0 0 12h32a6 6 0 0 0 6-6m-5.64-72.12a6 6 0 0 0-8.48 8.48L78.5 87a6 6 0 1 0 8.5-8.5Z"
+          />
+        </svg>
+
+        <svg
+          class="search-container__icon"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19 19L14.657 14.657M14.657 14.657C15.3998 13.9141 15.9891 13.0322 16.3912 12.0615C16.7932 11.0909 17.0002 10.0506 17.0002 9C17.0002 7.9494 16.7932 6.90908 16.3912 5.93845C15.9891 4.96782 15.3998 4.08589 14.657 3.343C13.9141 2.60011 13.0321 2.01082 12.0615 1.60877C11.0909 1.20673 10.0506 0.999794 8.99996 0.999794C7.94936 0.999794 6.90905 1.20673 5.93842 1.60877C4.96779 2.01082 4.08585 2.60011 3.34296 3.343C1.84263 4.84333 0.999756 6.87821 0.999756 9C0.999756 11.1218 1.84263 13.1567 3.34296 14.657C4.84329 16.1573 6.87818 17.0002 8.99996 17.0002C11.1217 17.0002 13.1566 16.1573 14.657 14.657Z"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div id="resultsContainer"></div>
+    </div>
+  </body>
+</html>

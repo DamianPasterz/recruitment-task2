@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  width: 100vw;
+  margin-top: 50px;
+}
+
+.search-container {
+  position: relative;
+  justify-content: center;
+  height: 60px;
+  width: 370px;
+  margin-bottom: 10px;
+
+  &__input {
+    all: unset;
+    position: relative;
+    font-size: 16px;
+    height: 100%;
+    padding-left: 17px;
+    width: calc(370px - 17px);
+    border-radius: 5px;
+    border: 1px solid rgba(209, 209, 209, 1);
+
+    &:focus ~ .search-container__label,
+    &:not(:placeholder-shown) ~ .search-container__label {
+      top: -15% !important;
+      left: 20px !important;
+      padding: 0 5px 0 5px;
+      transform: scale(0.8);
+      background: white;
+      color: rgba(161, 161, 161, 1);
+      opacity: 1;
+    }
+  }
+
+  &__label {
+    transition: all 0.1s ease-in-out;
+    color: rgba(141, 141, 141, 1);
+    position: absolute;
+    top: 40%;
+    left: 18px;
+    transform: scale(0.95);
+    opacity: 1;
+    font-size: 13px;
+    pointer-events: none;
+  }
+
+  &__icon {
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: calc(370px - 37px);
+  }
+
+  &__loader {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    left: calc(370px - 53px - 27px);
+    top: 17.5px;
+    border-radius: 10px;
+    display: none;
+  }
+}
+
+.result-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 370px;
+  height: 65px;
+  background-color: rgba(244, 244, 244, 1);
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    text-align: center;
+    font-weight: 400;
+  }
+
+  &:first-child::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 14.55px solid rgba(244, 244, 244, 1);
+    top: -5px;
+    left: 10px;
+    z-index: 123;
+  }
+
+  &:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 5px 5px;
+  }
+  &::before {
+    border-bottom: 1px solid #ccc;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 330px;
+    transform: translateX(-50%);
+  }
+}
