@@ -1,8 +1,7 @@
-import { fetchData } from './http-service.js';
+import { fetchData } from './api.js';
 
-export async function handleSearch(query, resultsContainer, loadingIndicator) {
-  console.log('ashdgj');
-  
+export  const handleSearch = async (query, resultsContainer, loadingIndicator) => {
+
   if (query.length === 0) {
     resultsContainer.innerHTML = '';
     return;
@@ -21,7 +20,7 @@ export async function handleSearch(query, resultsContainer, loadingIndicator) {
   }
 }
 
-function displayResults(data, resultsContainer) {
+const displayResults = (data, resultsContainer) => {
   data.products.forEach((result) => {
     const resultItem = document.createElement('div');
     resultItem.className = 'result-item';
