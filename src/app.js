@@ -1,5 +1,5 @@
-import { handleSearch } from './search.js';
-import { debounce } from './debounce.js';
+import { handleSearch } from '../search.js';
+import { debounce } from '../debounce.js';
 
 document.addEventListener('DOMContentLoaded',  () => {
   const searchInput = document.getElementById('searchInput');
