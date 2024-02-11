@@ -17,7 +17,7 @@ To run this project, you'll need a web browser that supports JavaScript.
 1. Clone the repository:
 
    ```bash
-   git clone <https://github.com/DamianPasterz/recruitment-task2.git>
+   git clone https://github.com/DamianPasterz/recruitment-task2.git
    ```
 
 2. Navigate to the project directory:
@@ -34,14 +34,20 @@ To run this project, you'll need a web browser that supports JavaScript.
 ├── index.html
 
 ├── src
-│ ├── modules
-│ │ └── api.js
-│ └── styles
-│ └── style.scss
-│ └── style.css
-│ └── \_variables.scss
-│ └── \_searchBar.scss
-│ └── \_animations.scss
+
+    └── modules
+      └── debounce.js
+      └── api.js
+      └── search.js
+    └── api.js
+
+└── styles
+
+    └── style.scss
+    └── style.css
+    └── _variables.scss
+    └── _searchBar.scss
+    └── _animations.scss
 
 - `index.html`: Main HTML file containing the search bar structure.
 - `src/modules/api.js`: JavaScript module responsible for fetching data from the API.
