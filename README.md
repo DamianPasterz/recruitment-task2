@@ -31,31 +31,28 @@ To run this project, you'll need a web browser that supports JavaScript.
 
 ## Directory Structure
 
-├── index.html
+      ├── index.html
+      └── src
+         └── api.js
+      └── modules
+         ├── debounce.js
+         ├── api.js
+         └── search.js
+      └── styles
+         ├── style.scss
+         ├── style.css
+         ├── _result.scss
+         ├── _layout.scss
+         └── _search.scss
 
-├── src
-
-    └── modules
-      └── debounce.js
-      └── api.js
-      └── search.js
-    └── api.js
-
-└── styles
-
-    └── style.scss
-    └── style.css
-    └── _variables.scss
-    └── _searchBar.scss
-    └── _animations.scss
 
 - `index.html`: Main HTML file containing the search bar structure.
 - `src/modules/api.js`: JavaScript module responsible for fetching data from the API.
 - `src/styles/style.css`: CSS file generated from SCSS, containing styles for the search bar and its components.
 - `src/styles/style.scss`: SCSS file containing styles for the search bar and its components.
-- `src/styles/_variables.scss`: SCSS file containing variables for consistent styling across the project.
-- `src/styles/_searchBar.scss`: SCSS file containing specific styles for the search bar component.
-- `src/styles/_animations.scss`: SCSS file containing animations for the search bar component.
+- `src/styles/_result.scss`:SCSS file containing specific styles for the resault container
+- `src/styles/_search.scss`: SCSS file containing specific styles for the search bar component.
+- `src/styles/_layout.scss`: SCSS file containing layout styles for the search bar component.
 
 ## Technologies Used
 
